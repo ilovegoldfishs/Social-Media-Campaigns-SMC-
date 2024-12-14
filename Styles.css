@@ -1,0 +1,946 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f0f2f5;
+}
+
+/* AdminLogin.php Start */
+.register {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    line-height: 1.6;
+    padding: 1rem;
+}
+
+.user-container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+
+.log-form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.log-form input {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.log-form select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #000;
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.login-link a {
+    color: #000;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .user-container {
+        padding: 1rem;
+    }
+}
+
+/* AdminLogin.php End */
+
+/* Nav Start */
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+.dash-header {
+    background-color: #1a1a2e;
+    color: white;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+nav {
+    width: 250px;
+    background-color: gray;
+    color: #fff;
+    padding: 1rem;
+    padding-top: 5rem;
+    height: 100vh;
+    position: fixed;
+    transition: transform 0.3s ease;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-bottom: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #0f3460;
+}
+
+/* Nav End */
+
+/* Dashboard.php Start */
+main {
+    flex: 1;
+    padding: 2rem;
+    margin-left: 250px;
+    margin-top: 60px;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    color: #1a1a2e;
+}
+
+.card-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #16213e;
+    margin-bottom: 0.5rem;
+}
+
+.big-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1a1a2e;
+}
+
+.trend {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.trend.positive {
+    color: #4caf50;
+}
+
+.trend.negative {
+    color: #f44336;
+}
+
+.trend.neutral {
+    color: #ff9800;
+}
+
+.chart-container {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Dashboard.php End */
+
+/* Media.php Start */
+.create {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.create-logo {
+    width: 100px;
+    height: 100px;
+    background-color: #f0f2f5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.create-logo:hover {
+    background-color: #e0e2e5;
+}
+
+.logo-circle {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#output{
+    width: 150px;
+}
+
+.plus {
+    font-size: 3rem;
+    color: #1a1a2e;
+}
+
+.social-media-apps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.app-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.app-card:hover {
+    transform: translateY(-5px);
+}
+
+.app-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.facebook {
+    background-color: #1877f2;
+}
+
+.instagram {
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+.twitter {
+    background-color: #1da1f2;
+}
+
+.linkedin {
+    background-color: #0077b5;
+}
+
+.app-card h3 {
+    margin-bottom: 0.5rem;
+    color: #1a1a2e;
+}
+
+.app-card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        transform: translateX(-100%);
+        z-index: 999;
+    }
+
+    nav.active {
+        transform: translateX(0);
+    }
+
+    main {
+        margin-left: 0;
+        margin-top: 60px;
+    }
+
+    .social-media-apps {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .card-container {
+        flex-direction: column;
+    }
+
+    .social-media-apps {
+        grid-template-columns: 1fr;
+    }
+}
+
+.table-container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    overflow-x: auto;
+}
+
+.responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.responsive-table th,
+.responsive-table td {
+    padding: 1rem;
+    text-align: left;
+}
+
+.responsive-table th {
+    background-color: #16213e;
+    color: #fff;
+    font-weight: bold;
+}
+
+.responsive-table tr:nth-child(even) {
+    background-color: #f0f2f5;
+}
+
+.responsive-table a {
+    color: #0077b5;
+    text-decoration: none;
+}
+
+.responsive-table a:hover {
+    text-decoration: underline;
+}
+
+.media-thumbnail {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    .responsive-table {
+        border: 0;
+    }
+
+    .responsive-table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    .responsive-table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+
+    .responsive-table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+
+    .responsive-table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .responsive-table td:last-child {
+        border-bottom: 0;
+    }
+}
+
+/* Media.php End */
+
+/* MediaCreate.php Start */
+.media-header {
+    background-color: #16213e;
+    color: white;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    display: block;
+    position: relative;
+}
+
+.media-header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.media-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+.breadcrumb {
+    font-size: 14px;
+}
+
+.breadcrumb a {
+    color: #f6ad55;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* Form styles */
+.social-media-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #16213e;
+    box-shadow: 0 0 0 3px rgba(4, 36, 244, 0.3);
+}
+
+.file-input-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.file-input-wrapper input[type=file] {
+    display: none;
+}
+
+#media-text {
+    color: white;
+}
+
+.file-input-wrapper label {
+    display: block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #16213e;
+    cursor: pointer;
+    width: 160px;
+    text-align: center;
+}
+
+.file-input-wrapper label:hover {
+    background-color: #246cd8;
+}
+
+.file-input-wrapper img {
+    width: 150px;
+    height: 120px;
+    border-radius: 10px;
+    margin: 10px;
+    object-fit: cover;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #f6ad55;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ed8936;
+}
+
+.btn-secondary {
+    background-color: #cbd5e0;
+    color: #4a5568;
+}
+
+.btn-secondary:hover {
+    background-color: #a0aec0;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .media-container {
+        padding: 10px;
+    }
+
+    .social-media-form {
+        padding: 20px;
+    }
+}
+
+/* MediaCreate.php end */
+
+/* Technique.php Start */
+
+.technique-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.technique-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.technique-card:hover {
+    background-color: #99dbff;
+}
+
+.technique-card h3 {
+    color: #16213e;
+    margin-bottom: 1rem;
+}
+
+.technique-card p {
+    margin-bottom: 1rem;
+}
+
+.technique-card ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 1rem;
+}
+
+.technique-card ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.technique-card ul li::before {
+    content: "•";
+    color: #0077b5;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+@media (max-width: 768px) {
+    .technique-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Technique.php End */
+
+/* CampaignsCreate.php Start */
+.campaign-form {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #16213e;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="datetime-local"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.photo-upload-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.photo-upload {
+    flex: 1;
+    min-width: 200px;
+}
+
+.photo-upload input[type="file"] {
+    display: none;
+
+}
+
+.photo-upload label {
+    display: block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #16213e;
+    color: #fff;
+    cursor: pointer;
+    width: 160px;
+    text-align: center;
+}
+
+.photo-upload label:hover {
+    background-color: #246cd8;
+}
+
+.photo-upload img {
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+    margin: 10px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .photo-upload-container {
+        flex-direction: column;
+    }
+}
+
+/* CampaignsCreate.php End */
+
+/* Campaigns.php Start */
+
+.campaign-card {
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.campaign-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.campaign-card p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.campaign-photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.campaign-photos img {
+    margin: 10px;
+    border-radius: 10px;
+    width: 200px;
+    height: 150px;
+}
+
+.campaign-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.campaign-actions a {
+    font-size: 18px;
+    margin: 10px;
+    text-decoration: none;
+    color: #337ab7;
+}
+
+.campaign-actions a:hover {
+    color: #23527c;
+}
+
+/* Campaign.php End */
+
+/* CampaignsType.php Start */
+.campaign-type-form {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.campaign-type-options {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.campaign-type-option {
+    display: block;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.campaign-type-option:hover {
+    transform: translateY(-5px);
+}
+
+.option-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+
+.campaign-type-option :hover {
+    border-color: #0077b5;
+    background-color: #e6f3f9;
+}
+
+.option-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.option-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #16213e;
+}
+
+.option-description {
+    font-size: 0.9rem;
+    text-align: center;
+    color: #666;
+}
+
+/* CampaignsType.php End */
+
+/* Donation.php Start */
+.donate-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.donate-dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.donate-card {
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.donate-card h3 {
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.donate-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.donate-table th,
+td {
+    padding: 0.5rem;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.donate-table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.donate-table tr:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.pagination a {
+    color: #000;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border: 1px solid #f0f0f0;
+    margin: 0 0.25rem;
+}
+
+.pagination a.active {
+    background-color: #000;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Donation.php End */
